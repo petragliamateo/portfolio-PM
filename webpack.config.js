@@ -1,4 +1,5 @@
-const path = require('path')
+const path = require('path');
+
 const config = {
   entry: './src/index.js',
   output: {
@@ -7,7 +8,7 @@ const config = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'build')
+      directory: path.join(__dirname, 'build'),
     },
     compress: true,
     port: 3000,
@@ -26,8 +27,12 @@ const config = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
-}
+};
 
-module.exports = config
+module.exports = config;

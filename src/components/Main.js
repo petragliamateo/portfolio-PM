@@ -1,9 +1,20 @@
-import { useSelector } from 'react-redux';
+import React from 'react';
+
+import instagramDark from '../icons/instagram-dark.svg';
+import linkedinDark from '../icons/linkedin-dark.svg';
+import githubDark from '../icons/github-dark.svg';
 
 export default function Main({ trans, handleScroll }) {
   const marginResponsiveX = 'xl:mx-52 lg:mx-48 md:mx-32 sm:mx-16 mx-12';
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
-  const colors = useSelector((state) => state.colors);
+  const colors = {
+    main: '#0D0000',
+    navbar: '#260101',
+    line: '#D9B6A3',
+    button: '#485673',
+    text: '#929FE8',
+    dark6: '#9FBDD6',
+  };
 
   return (
     <div className="my-auto">
@@ -31,17 +42,17 @@ export default function Main({ trans, handleScroll }) {
         <ul className="flex mb-2 mt-8">
           <li className={`mr-2 ${hoverButton}`}>
             <a href="https://github.com/petragliamateo">
-              <img alt="" src="/Icons/github-dark.svg" />
+              <img alt="" src={githubDark} />
             </a>
           </li>
           <li className={`mx-2 ${hoverButton}`}>
             <a href="https://www.linkedin.com/in/petragliamateo/">
-              <img alt="" src="/Icons/linkedin-dark.svg" />
+              <img alt="" src={linkedinDark} />
             </a>
           </li>
           <li className={`mx-2 ${hoverButton}`}>
             <a href="https://www.instagram.com/petragliamateo/">
-              <img alt="" src="/Icons/instagram-dark.svg" />
+              <img alt="" src={instagramDark} />
             </a>
           </li>
         </ul>

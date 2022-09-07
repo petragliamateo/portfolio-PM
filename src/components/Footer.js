@@ -1,5 +1,11 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
+import React from 'react';
+
+import instagramLight from '../icons/instagram-light.svg';
+import linkedinLight from '../icons/linkedin-light.svg';
+import githubLight from '../icons/github-light.svg';
+
 export default function Footer() {
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
 
@@ -9,19 +15,19 @@ export default function Footer() {
       <ul className="flex my-5 self-center">
         <li className={`mr-2 ${hoverButton}`}>
           <a href="https://github.com/petragliamateo">
-            <img alt="" src="/Icons/github-light.svg" />
+            <img alt="" src={githubLight} />
           </a>
         </li>
 
         <li className={`mx-2 ${hoverButton}`}>
           <a href="https://www.linkedin.com/in/petragliamateo/">
-            <img alt="" src="/Icons/linkedin-light.svg" />
+            <img alt="" src={linkedinLight} />
           </a>
         </li>
 
         <li className={`mx-2 ${hoverButton}`}>
           <a href="https://www.instagram.com/petragliamateo/">
-            <img alt="" src="/Icons/instagram-light.svg" />
+            <img alt="" src={instagramLight} />
           </a>
         </li>
       </ul>
