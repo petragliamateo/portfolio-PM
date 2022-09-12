@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import instagramDark from '../icons/instagram-dark.svg';
 import linkedinDark from '../icons/linkedin-dark.svg';
 import githubDark from '../icons/github-dark.svg';
 
-export default function Main({ trans, handleScroll }) {
+export default function Main({ handleScroll }) {
+  const [transformation, setTransformation] = useState('scale-x-0');
   const marginResponsiveX = 'xl:mx-52 lg:mx-48 md:mx-32 sm:mx-16 mx-12';
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
   const colors = {
@@ -16,18 +17,22 @@ export default function Main({ trans, handleScroll }) {
     dark6: '#9FBDD6',
   };
 
+  useEffect(() => {
+    setTransformation('scale-x-110');
+  }, []);
+
   return (
-    <div className="my-auto">
+    <div className="my-auto bg-black py-32">
       <div className={`${marginResponsiveX}`} style={{ color: colors.main }}>
-        <h1 className="text-5xl font-semibold my-1">
+        <h1 className="text-6xl font-semibold text-white mb-1">
           Hola! Soy Mateo
         </h1>
         <hr
-          className={`reveal0 w-64 mx-16 border transition-transform duration-1000 ease-out ${trans}`}
-          style={{ borderColor: colors.line }}
+          className={`reveal0 w-96 ml-6 border transition-transform duration-1000 ease-out ${transformation}`}
+          style={{ borderColor: colors.text }}
         />
-        <h1 className="text-2xl font-semibold mt-2 mb-8">
-          Web Developer
+        <h1 className="text-3xl font-semibold mt-4 mb-16 text-white">
+          Desarrollador Full Stack
         </h1>
 
         <button

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProyectoMuestra from './ProyectoMuestra';
+import ProyectoMuestra from '../components/ProyectoMuestra';
 import * as content from '../pageConfig.json';
 
 export default function Proyectos() {

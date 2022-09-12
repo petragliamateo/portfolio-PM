@@ -4,17 +4,17 @@ import React from 'react';
 
 export default function Navbar({ handleScroll }) {
   const navResponsive = ' hidden lg:block';
-  const listMenu = 'mx-2 hover:text-dark-5 transition duration-500 ease-in-out';
+  const listMenu = 'mx-2 hover:text-dark-5 transition duration-500 ease-in-out text-white';
   const marginResponsiveX = 'lg:mx-32 md:mx-24 sm:mx-12 mx-8';
   const slideItem = 'bg-dark-4 w-full h-12 mx-auto hover:text-dark-5 transition-transform';
   const [slide, setSlide] = React.useState(false);
 
   return (
-    <div>
+    <div className="bg-black border-gray-700" style={{ borderBottomWidth: 1 }}>
       <div
-        className={`flex justify-between my-5 ${marginResponsiveX} text-2xl font-semibold`}
+        className={`flex justify-between ${marginResponsiveX} text-2xl font-semibold h-16 items-center`}
       >
-        <h1>Mateo Petraglia</h1>
+        <h1 className="text-dark-5">Mateo Petraglia</h1>
 
         <div className={navResponsive}>
           <ul className="flex">
@@ -32,7 +32,7 @@ export default function Navbar({ handleScroll }) {
             </li>
           </ul>
         </div>
-        <div className="block lg:hidden cursor-pointer" onClick={() => setSlide((prev) => !prev)}>
+        <div className="block lg:hidden cursor-pointer text-dark-5" onClick={() => setSlide((prev) => !prev)}>
           Menu
         </div>
       </div>
