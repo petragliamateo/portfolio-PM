@@ -1,18 +1,18 @@
 import React from 'react';
 
-import ProyectoMuestra from './ProyectoMuestra';
+import Workes from '../components/Workes';
 import * as content from '../pageConfig.json';
 
-export default function Proyectos() {
-  const { projects } = content;
+export default function Work() {
+  const { work } = content;
   return (
     <div className="w-full flex flex-col" id="projects">
-      <h1 className="self-center mt-16 text-3xl font-semibold text-dark-6">Proyectos</h1>
+      <h1 className="self-center mt-16 text-3xl font-semibold text-dark-6">Work</h1>
 
       <div className="flex flex-col">
 
-        {projects.map((p) => (
-          <ProyectoMuestra key={p.id} project={p} />
+        {work.map((p) => (
+          <Workes key={p.id} project={p} />
         ))}
 
         <a

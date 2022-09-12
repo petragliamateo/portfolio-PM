@@ -27,13 +27,24 @@
       "id": 1
     },
     {
-      "titulo": "Juegones",
+      "titulo": "Juegos",
       "contenido": "Recopilación de algunos juegos y/o aplicaciones creados usando React, APIs o simplemente JavaScript.",
       "imgUrl": "/images/Juegones.png",
       "progectUrl": "https://juegones.vercel.app/",
       "projectMsg": "Ir",
       "gitUrl": "https://github.com/petragliamateo/Juegones",
       "id": 2
+    }
+  ],
+  "work": [
+    {
+      "titulo": "Algoritmopedia",
+      "contenido": "Programé y diseñé la aplicación para Algoritmopedia, programada en React Native. También programé el servidor backend usando Node.js, conectandose con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guardando los datos en otra base de datos usando MongoDB.",
+      "imgUrl": "/images/Netflix-clone.png",
+      "progectUrl": "https://expo.dev/artifacts/60d41dfa-8c3a-44d1-b5eb-c8ad12ba218e",
+      "projectMsg": "Descargar APK",
+      "gitUrl": "https://github.com/petragliamateo/Netflix-Clone-Android",
+      "id": 1
     }
   ],
   "palettes": {

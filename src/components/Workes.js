@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ProyectoMuestra({ project }) {
+export default function Workes({ project }) {
   const {
     imgUrl, titulo, contenido, projectUrl, projectMsg, gitUrl, id,
   } = project;
@@ -11,7 +11,7 @@ export default function ProyectoMuestra({ project }) {
   const responsiveCont = 'lg:w-2/3 md:w-[680px] w-auto md:h-94 h-auto flex md:flex-row flex-col';
 
   return (
-    <div className={`flex ${position} ${responsiveCont} my-16 bg-dark-1 bg-opacity-80`}>
+    <div className={`flex ${position} ${responsiveCont} my-16 bg-dark-2 bg-opacity-80`}>
       <div className="md:w-1/2 w-auto h-full bg-blue-500 self-center"><img alt="" src={imgUrl} /></div>
       <div className="text-center w-full flex flex-col justify-between">
         <h1 className="my-8 text-2xl font-semibold">{titulo}</h1>
