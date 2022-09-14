@@ -3,10 +3,11 @@ import React, { useEffect, useState } from 'react';
 import instagramDark from '../icons/instagram-dark.svg';
 import linkedinDark from '../icons/linkedin-dark.svg';
 import githubDark from '../icons/github-dark.svg';
+import lineCircle from '../icons/lineCircle.png';
 
 export default function Main({ handleScroll }) {
   const [transformation, setTransformation] = useState('scale-x-0');
-  const marginResponsiveX = 'xl:mx-52 lg:mx-48 md:mx-32 sm:mx-16 mx-12';
+  const marginResponsive = (x) => `xl:m${x}-52 lg:m${x}-48 md:m${x}-32 sm:m${x}-16 m${x}-12`;
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
   const colors = {
     main: '#0D0000',
@@ -22,8 +23,8 @@ export default function Main({ handleScroll }) {
   }, []);
 
   return (
-    <div className="my-auto bg-black py-32">
-      <div className={`${marginResponsiveX}`} style={{ color: colors.main }}>
+    <div className="my-auto bg-black py-32 lg:flex items-center">
+      <div className={`${marginResponsive('x')}`} style={{ color: colors.main }}>
         <h1 className="text-6xl font-semibold text-white mb-1">
           Hola! Soy Mateo
         </h1>
@@ -63,6 +64,14 @@ export default function Main({ handleScroll }) {
         </ul>
       </div>
 
+      <div className="" style={{ width: 500 }}>
+        <img
+          src={lineCircle}
+          alt=""
+          className="mx-24 my-16 animate-spin"
+          style={{ width: 500, height: 500 }}
+        />
+      </div>
     </div>
   );
 }
