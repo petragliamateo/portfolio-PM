@@ -4,8 +4,9 @@ import instagramDark from '../icons/instagram-dark.svg';
 import linkedinDark from '../icons/linkedin-dark.svg';
 import githubDark from '../icons/github-dark.svg';
 import lineCircle from '../icons/lineCircle.png';
+import { handleScroll } from '../utils/documentFunctions';
 
-export default function Main({ handleScroll }) {
+export default function Main() {
   const [transformation, setTransformation] = useState('scale-x-0');
   const marginResponsive = 'xl:ml-52 lg:ml-48 md:ml-32 sm:ml-16 ml-12';
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
@@ -23,7 +24,7 @@ export default function Main({ handleScroll }) {
   }, []);
 
   return (
-    <div className="my-auto bg-black py-32 lg:flex items-center justify-between">
+    <div className="my-auto bg-black py-32 lg:flex items-center justify-between" id="home">
       <div className={`${marginResponsive}`} style={{ color: colors.main }}>
         <h1 className="text-6xl font-semibold text-white mb-1">
           Hola! Soy Mateo
@@ -32,7 +33,7 @@ export default function Main({ handleScroll }) {
           className={`reveal0 w-96 ml-6 border transition-transform duration-1000 ease-out ${transformation}`}
           style={{ borderColor: colors.text }}
         />
-        <h1 className="text-3xl font-semibold mt-4 mb-16 text-white">
+        <h1 className="text-3xl font-semibold mt-4 mb-8 text-white">
           Desarrollador Full Stack
         </h1>
 
@@ -42,7 +43,7 @@ export default function Main({ handleScroll }) {
           style={{ borderColor: colors.button }}
           className="btn btn-dark"
         >
-          Contact Me
+          Contacto
         </button>
 
         <ul className="flex mb-2 mt-8">
@@ -64,7 +65,7 @@ export default function Main({ handleScroll }) {
         </ul>
       </div>
 
-      <div className="mx-24 my-6" style={{ minWidth: 500, width: 500, height: 500 }}>
+      <div className="mx-24 my-4" style={{ minWidth: 500, width: 500, height: 500 }}>
         <img
           src={lineCircle}
           alt=""

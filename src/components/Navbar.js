@@ -2,7 +2,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 
-export default function Navbar({ handleScroll }) {
+import { handleScroll } from '../utils/documentFunctions';
+
+export default function Navbar() {
   const navResponsive = ' hidden lg:block';
   const listMenu = 'mx-2 hover:text-dark-5 transition duration-500 ease-in-out text-white';
   const marginResponsiveX = 'lg:mx-32 md:mx-24 sm:mx-12 mx-8';

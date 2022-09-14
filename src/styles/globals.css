@@ -24,11 +24,21 @@ a {
   @apply py-4 px-8 font-bold shadow-xl border;
 }
 .btn-dark{
-  @apply bg-dark-3 text-dark-6 hover:border-dark-3;
+  @apply bg-black text-dark-6 hover:border-dark-3;
   /*border-dark-2 --> border-<color> with <color> = bg-color*/
 }
-/*
-#about{
-  background-image: linear-gradient(to top, #0A1356 0%, 22.04529345035553%, #03010E 44.09058690071106%, 48.76149892807007%, #000000 53.43241095542908%, 76.71620547771454%, #0A1356 100%);
+
+/* Para los items que se muestran al scrollear: */
+.cta {
+    z-index: 1;
+    transition: all 1s;
+    @apply bg-dark-6 text-slate-800 w-6 h-9 text-3xl rounded-full fixed bottom-0 right-0 mb-5 mr-5;
 }
-*/
+.hide {
+    opacity:0;
+    right:-100%;
+}
+.show {
+    opacity:1;
+    right:0;
+}
