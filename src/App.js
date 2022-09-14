@@ -3,7 +3,7 @@ import React from 'react';
 
 import '../dist/output.css';
 import Navbar from './components/Navbar';
-import Main from './components/Main';
+import Main from './containers/Main';
 import Footer from './components/Footer';
 import Proyectos from './containers/Proyectos';
 import Work from './containers/Work';
