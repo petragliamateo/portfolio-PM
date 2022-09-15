@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+import { handleScroll } from '../utils/documentFunctions';
+
 import instagramDark from '../icons/instagram-dark.svg';
 import linkedinDark from '../icons/linkedin-dark.svg';
 import githubDark from '../icons/github-dark.svg';
 import lineCircle from '../icons/lineCircle.png';
-import { handleScroll } from '../utils/documentFunctions';
+import lineCircle2 from '../icons/lineCircle2.png';
 
 export default function Main() {
   const [transformation, setTransformation] = useState('scale-x-0');
@@ -65,13 +67,11 @@ export default function Main() {
         </ul>
       </div>
 
-      <div className="mx-24 my-4" style={{ minWidth: 500, width: 500, height: 500 }}>
-        <img
-          src={lineCircle}
-          alt=""
-          className="animate-[spin_15s_linear_infinite]"
-          style={{ width: 450, height: 450 }}
-        />
+      <div className="mx-24 my-4 flex flex-wrap" style={{ minWidth: 400, width: 400, height: 400 }}>
+        <img src={lineCircle} alt="" className="animate-[spin_15s_linear_infinite] w-1/2 h-1/2" />
+        <img src={lineCircle2} alt="" className="animate-[spin_10s_linear_infinite] w-1/2 h-1/2" />
+        <img src={lineCircle2} alt="" className="animate-[spin_5s_linear_infinite] w-1/2 h-1/2" />
+        <img src={lineCircle} alt="" className="animate-[spin_20s_linear_infinite] w-1/2 h-1/2" />
       </div>
     </div>
   );
