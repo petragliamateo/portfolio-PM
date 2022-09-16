@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 import { handleScroll } from '../utils/documentFunctions';
 
-import instagramDark from '../icons/instagram-dark.svg';
-import linkedinDark from '../icons/linkedin-dark.svg';
-import githubDark from '../icons/github-dark.svg';
-import lineCircle from '../icons/lineCircle.png';
-import lineCircle2 from '../icons/lineCircle2.png';
+import instagramDark from '../assets/icons/instagram-dark.svg';
+import linkedinDark from '../assets/icons/linkedin-dark.svg';
+import githubDark from '../assets/icons/github-dark.svg';
+import lineCircle from '../assets/icons/lineCircle.png';
+import lineCircle2 from '../assets/icons/lineCircle2.png';
 
 export default function Main() {
   const [transformation, setTransformation] = useState('scale-x-0');
