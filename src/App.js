@@ -7,6 +7,7 @@ import Main from './containers/Main';
 import Footer from './components/Footer';
 import Proyectos from './containers/Proyectos';
 import Work from './containers/Work';
+import About from './containers/About';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Main />
       <Work />
       <Proyectos />
+      <About />
       <Footer />
     </div>
   );
