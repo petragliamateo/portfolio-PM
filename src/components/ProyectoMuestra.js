@@ -12,9 +12,10 @@ export default function ProyectoMuestra({ project }) {
     ? 'md:mr-auto lg:ml-32 md:ml-16 mx-12 md:flex-row'
     : 'md:ml-auto lg:mr-32 md:mr-16 mx-12 md:flex-row-reverse';
   const responsiveCont = 'lg:w-2/3 md:w-[680px] w-auto md:h-94 h-auto flex md:flex-row flex-col';
+  const shadowAnimation = 'hover:shadow-md transition-shadow duration-1000 ease-out';
 
   return (
-    <div className={`flex ${position} ${responsiveCont} my-16 bg-dark-0 bg-opacity-80`}>
+    <div className={`flex ${position} ${responsiveCont} my-16 bg-dark-0 bg-opacity-80 ${shadowAnimation}`}>
       <div className="md:w-1/2 w-auto h-full bg-blue-500 self-center"><img alt="" src={Images[imgName]} /></div>
       <div className="text-center w-full flex flex-col justify-between">
         <h1 className="my-8 text-2xl font-semibold">{titulo}</h1>

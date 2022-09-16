@@ -5,16 +5,14 @@ import * as Images from '../assets/images/index';
 
 export default function Workes({ project }) {
   const {
-    imgName, titulo, contenido, projectUrl, projectMsg, gitUrl, id,
+    imgName, titulo, contenido, projectUrl, projectMsg, gitUrl,
   } = project;
 
-  const position = Math.floor(id / 2) * 2 === id
-    ? 'md:mr-auto lg:ml-32 md:ml-16 mx-12 md:flex-row'
-    : 'md:ml-auto lg:mr-32 md:mr-16 mx-12 md:flex-row-reverse';
   const responsiveCont = 'lg:w-2/3 md:w-[680px] w-auto md:h-94 h-auto flex md:flex-row flex-col';
+  const shadowAnimation = 'hover:shadow-md transition-shadow duration-1000 ease-out';
 
   return (
-    <div className={`flex ${position} ${responsiveCont} my-16 border-2 border-black`}>
+    <div className={`flex self-center ${responsiveCont} my-16 border-2 border-gray-800 ${shadowAnimation}`}>
       <div className="md:w-1/2 w-auto h-full bg-blue-500 self-center">
         <img alt="" src={Images[imgName]} />
       </div>

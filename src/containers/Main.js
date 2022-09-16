@@ -67,7 +67,7 @@ export default function Main() {
         </ul>
       </div>
 
-      <div className="mx-24 my-4 flex flex-wrap" style={{ minWidth: 400, width: 400, height: 400 }}>
+      <div className="xl:mr-52 lg:mr-48 mx-24 my-4 flex flex-wrap" style={{ minWidth: 400, width: 400, height: 400 }}>
         <img src={lineCircle} alt="" className="animate-[spin_15s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_10s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_5s_linear_infinite] w-1/2 h-1/2" />
