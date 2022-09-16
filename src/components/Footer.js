@@ -2,9 +2,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 
-import instagramLight from '../icons/instagram-light.svg';
-import linkedinLight from '../icons/linkedin-light.svg';
-import githubLight from '../icons/github-light.svg';
+import instagramLight from '../assets/icons/instagram-light.svg';
+import linkedinLight from '../assets/icons/linkedin-light.svg';
+import githubLight from '../assets/icons/github-light.svg';
 import { handleScroll, onScrollFixedReveal } from '../utils/documentFunctions';
 
 export default function Footer() {
