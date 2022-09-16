@@ -6,8 +6,8 @@ import * as content from '../pageConfig.json';
 export default function Proyectos() {
   const { projects } = content;
   return (
-    <div className="w-full flex flex-col" id="projects">
-      <h1 className="self-center mt-16 text-3xl font-semibold text-dark-6">Proyectos</h1>
+    <div className="w-full flex flex-col bg-dark-6" id="projects">
+      <h1 className="self-center mt-16 text-3xl font-semibold text-gray-800">Proyectos</h1>
 
       <div className="flex flex-col">
 
@@ -17,7 +17,7 @@ export default function Proyectos() {
 
         <a
           href="https://github.com/petragliamateo"
-          className="mb-8 w-64 mx-auto text-center btn btn-dark border-r-dark-2 border-b-dark-2 border-l-dark-3 border-t-dark-3"
+          className="mb-8 w-64 mx-auto text-center btn btn-dark border-dark-6"
         >
           Todos los proyectos en Github
         </a>
