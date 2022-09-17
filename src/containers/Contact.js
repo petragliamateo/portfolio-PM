@@ -3,7 +3,7 @@ import React from 'react';
 import {
   setDoc, doc, getFirestore,
 } from 'firebase/firestore';
-import { app } from './firebase';
+import { app } from '../utils/firebase';
 
 export default function Contact() {
   const [formData, setFormData] = React.useState({

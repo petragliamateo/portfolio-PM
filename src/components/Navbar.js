@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 
-import { handleScroll } from '../utils/documentFunctions';
+import { handleScroll, hideNavbar } from '../utils/documentFunctions';
 
 export default function Navbar() {
   const navResponsive = ' hidden lg:block';
@@ -11,8 +11,18 @@ export default function Navbar() {
   const slideItem = 'bg-dark-4 w-full h-12 mx-auto hover:text-dark-5 transition-transform';
   const [slide, setSlide] = React.useState(false);
 
+  React.useEffect(() => {
+    hideNavbar();
+  }, []);
+  // Pasar todas las funciones activas a un hook personalizado
+  // --> Animaciones quedan arriba del navbar.
+
   return (
-    <div className="bg-black border-gray-700" style={{ borderBottomWidth: 1 }}>
+    <div
+      className="bg-black border-gray-700 fixed w-full top-0 transition-all"
+      style={{ borderBottomWidth: 1 }}
+      id="navbar"
+    >
       <div
         className={`flex justify-between ${marginResponsiveX} text-2xl font-semibold h-16 items-center`}
       >

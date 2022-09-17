@@ -2,21 +2,23 @@
 import React from 'react';
 
 import '../dist/output.css';
+
 import Navbar from './components/Navbar';
-import Main from './containers/Main';
 import Footer from './components/Footer';
-import Proyectos from './containers/Proyectos';
-import Work from './containers/Work';
-import About from './containers/About';
+import {
+  About, Contact, Main, Proyectos, Work,
+} from './containers';
 
 export default function App() {
   return (
     <div style={appStyle}>
       <Navbar />
+      <div className="h-12 w-full bg-black" />
       <Main />
       <Work />
       <Proyectos />
       <About />
+      <Contact />
       <Footer />
     </div>
   );

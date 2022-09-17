@@ -13,7 +13,7 @@ export default function About() {
     dark6: '#9FBDD6',
   };
   return (
-    <div className="w-full flex flex-col relative bg-dark-5" id="about">
+    <div className="w-full flex flex-col bg-dark-5" id="about">
       <h1 className="self-center my-12 text-3xl font-semibold text-gray-900">Sobre mi</h1>
 
       <div className="flex flex-wrap justify-center md:mx-32 mx-16">

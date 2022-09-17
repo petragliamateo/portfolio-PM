@@ -29,4 +29,19 @@ function onScrollReveal(elementId) {
   window.addEventListener('scroll', myScrollFunc);
 }
 
-export { handleScroll, onScrollFixedReveal, onScrollReveal };
+function hideNavbar() {
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById('navbar').style.top = '0';
+    } else {
+      document.getElementById('navbar').style.top = '-60px';
+    }
+    prevScrollpos = currentScrollPos;
+  };
+}
+
+export {
+  handleScroll, onScrollFixedReveal, onScrollReveal, hideNavbar,
+};
