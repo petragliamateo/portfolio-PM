@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import githubLight from '../assets/icons/github-light.svg';
 import * as Images from '../assets/images/index';
+import { onScrollReveal } from '../utils/documentFunctions';
 
 export default function Workes({ project }) {
   const {
     imgName, titulo, contenido, projectUrl, projectMsg, gitUrl,
   } = project;
 
+  const thisRef = useRef();
+  useEffect(() => {
+    onScrollReveal(thisRef.current);
+  }, []);
+
   const responsiveCont = 'lg:w-2/3 md:w-[680px] w-auto md:h-94 h-auto flex md:flex-row flex-col';
   const shadowAnimation = 'hover:shadow-md transition-shadow duration-1000 ease-out';
 
   return (
-    <div className={`flex self-center ${responsiveCont} my-16 border-2 border-gray-800 ${shadowAnimation}`}>
+    <div ref={thisRef} className={`flex self-center ${responsiveCont} my-16 border-2 border-gray-800 ${shadowAnimation} transition-opacity`}>
       <div className="md:w-1/2 w-auto h-full bg-blue-500 self-center">
         <img alt="" src={Images[imgName]} />
       </div>

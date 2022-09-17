@@ -4,7 +4,6 @@ function handleScroll(component) {
 
 function onScrollFixedReveal(elementId) {
   const element = document.getElementById(elementId);
-
   const myScrollFunc = () => {
     const y = window.scrollY;
     if (y >= 500) {
@@ -16,14 +15,14 @@ function onScrollFixedReveal(elementId) {
   window.addEventListener('scroll', myScrollFunc);
 }
 
-function onScrollReveal(elementId) {
-  const element = document.getElementById(elementId);
-  element.className = 'hide';
+function onScrollReveal(reactElementRef) {
+  const element = reactElementRef;
+  element.style.opacity = 0;
 
   const myScrollFunc = () => {
-    const y = window.scrollY;
-    if (y >= 500) {
-      element.className = 'cta show';
+    const pos = element.getBoundingClientRect().y;
+    if (pos <= 300) {
+      element.style.opacity = 1;
     }
   };
   window.addEventListener('scroll', myScrollFunc);
