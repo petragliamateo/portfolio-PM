@@ -9,9 +9,13 @@ import lineCircle from '../assets/icons/lineCircle.png';
 import lineCircle2 from '../assets/icons/lineCircle2.png';
 
 export default function Main() {
-  const [transformation, setTransformation] = useState('scale-x-0');
+  const [initialValues, setInitialValues] = useState({
+    hr: 'scale-x-0', btn: 'scale-0', opacity: 'opacity-0',
+  });
   const marginResponsive = 'xl:ml-52 lg:ml-48 md:ml-32 sm:ml-16 ml-12';
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
+  const initialButton = `transition-transform duration-200 ${initialValues.btn}`;
+  const initialOpacity = `transition-opacity duration-1000 ${initialValues.opacity}`;
   const colors = {
     main: '#0D0000',
     navbar: '#260101',
@@ -22,7 +26,7 @@ export default function Main() {
   };
 
   useEffect(() => {
-    setTransformation('scale-x-110');
+    setInitialValues({});
   }, []);
 
   return (
@@ -32,7 +36,7 @@ export default function Main() {
           Hola! Soy Mateo
         </h1>
         <hr
-          className={`w-96 ml-6 border transition-transform duration-1000 ease-out ${transformation}`}
+          className={`w-96 ml-6 border transition-transform duration-1000 ${initialValues.hr}`}
           style={{ borderColor: colors.text }}
         />
         <h1 className="text-3xl font-semibold mt-4 mb-8 text-white">
@@ -43,31 +47,37 @@ export default function Main() {
           type="button"
           onClick={() => handleScroll('contact')}
           style={{ borderColor: colors.button }}
-          className="btn btn-dark"
+          className={`btn btn-dark ${initialOpacity}`}
         >
           Contacto
         </button>
 
         <ul className="flex mb-2 mt-8">
-          <li className={`mr-2 ${hoverButton}`}>
-            <a href="https://github.com/petragliamateo">
-              <img alt="" src={githubDark} />
-            </a>
+          <li className={`mr-2 ${hoverButton} ${initialValues.btn}`}>
+            <div className={`${initialButton} delay-100`}>
+              <a href="https://github.com/petragliamateo">
+                <img alt="" src={githubDark} />
+              </a>
+            </div>
+          </li>
+          <li className={`mx-2 ${hoverButton} ${initialValues.btn}`}>
+            <div className={`${initialButton} delay-200`}>
+              <a href="https://www.linkedin.com/in/petragliamateo/">
+                <img alt="" src={linkedinDark} />
+              </a>
+            </div>
           </li>
           <li className={`mx-2 ${hoverButton}`}>
-            <a href="https://www.linkedin.com/in/petragliamateo/">
-              <img alt="" src={linkedinDark} />
-            </a>
-          </li>
-          <li className={`mx-2 ${hoverButton}`}>
-            <a href="https://www.instagram.com/petragliamateo/">
-              <img alt="" src={instagramDark} />
-            </a>
+            <div className={`${initialButton} delay-300`}>
+              <a href="https://www.instagram.com/petragliamateo/">
+                <img alt="" src={instagramDark} />
+              </a>
+            </div>
           </li>
         </ul>
       </div>
 
-      <div className="xl:mr-52 lg:mr-48 mx-24 my-4 flex flex-wrap" style={{ minWidth: 400, width: 400, height: 400 }}>
+      <div className={`xl:mr-52 lg:mr-48 mx-24 my-4 flex flex-wrap ${initialOpacity} delay-500`} style={{ minWidth: 400, width: 400, height: 400 }}>
         <img src={lineCircle} alt="" className="animate-[spin_15s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_10s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_5s_linear_infinite] w-1/2 h-1/2" />
