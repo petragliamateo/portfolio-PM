@@ -15,10 +15,9 @@ export default function Workes({ project }) {
   }, []);
 
   const responsiveCont = 'lg:w-2/3 md:w-[680px] w-auto md:h-94 h-auto flex md:flex-row flex-col';
-  const shadowAnimation = 'hover:shadow-md transition-shadow duration-1000 ease-out';
 
   return (
-    <div ref={thisRef} className={`flex self-center ${responsiveCont} my-16 border-2 border-gray-800 ${shadowAnimation} transition-opacity`}>
+    <div ref={thisRef} className={`flex self-center ${responsiveCont} my-16 shadow-md hover:shadow-2xl transition-all duration-1000 ease-out`}>
       <div className="md:w-1/2 w-auto h-full bg-blue-500 self-center">
         <img alt="" src={Images[imgName]} />
       </div>
