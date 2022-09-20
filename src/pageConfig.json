@@ -39,7 +39,7 @@
   "work": [
     {
       "titulo": "Algoritmopedia",
-      "contenido": "Programé y diseñé la aplicación para Algoritmopedia, programada en React Native. También programé el servidor backend usando Node.js, conectandose con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guardando los datos en otra base de datos usando MongoDB.",
+      "contenido": "Programé y diseñé la aplicación para Algoritmopedia, utilizando React Native. También desarrollé el servidor backend con Node.js, conectandose con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guardando los datos en otra base de datos usando MongoDB.",
       "imgName": "algoritmopedia",
       "projectUrl": "https://algoritmopedia.org/index.php/movil/",
       "projectMsg": "Ir",

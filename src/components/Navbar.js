@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { handleScroll, hideNavbar } from '../utils/documentFunctions';
+import list from '../assets/icons/list.svg';
 
 export default function Navbar() {
   const navResponsive = ' hidden lg:block';
@@ -38,15 +39,15 @@ export default function Navbar() {
               <button type="button" onClick={() => handleScroll('about')}>About</button>
             </li>
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('projects')}>Projects</button>
+              <button type="button" onClick={() => handleScroll('projects')}>Proyectos</button>
             </li>
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('contact')}>Contact</button>
+              <button type="button" onClick={() => handleScroll('contact')}>Contacto</button>
             </li>
           </ul>
         </div>
         <div className="block lg:hidden cursor-pointer text-dark-5" onClick={() => setSlide((prev) => !prev)}>
-          Menu
+          <img alt="" src={list} />
         </div>
       </div>
 
@@ -54,7 +55,10 @@ export default function Navbar() {
         <button
           type="button"
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-300`}
-          onClick={() => handleScroll('home')}
+          onClick={() => {
+            setSlide((prev) => !prev);
+            handleScroll('home');
+          }}
         >
           Home
 
@@ -62,7 +66,10 @@ export default function Navbar() {
         <button
           type="button"
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-500`}
-          onClick={() => handleScroll('about')}
+          onClick={() => {
+            setSlide((prev) => !prev);
+            handleScroll('about');
+          }}
         >
           About
 
@@ -70,7 +77,10 @@ export default function Navbar() {
         <button
           type="button"
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-700`}
-          onClick={() => handleScroll('projects')}
+          onClick={() => {
+            setSlide((prev) => !prev);
+            handleScroll('projects');
+          }}
         >
           Projects
 
@@ -78,7 +88,10 @@ export default function Navbar() {
         <button
           type="button"
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-1000`}
-          onClick={() => handleScroll('contact')}
+          onClick={() => {
+            setSlide((prev) => !prev);
+            handleScroll('contact');
+          }}
         >
           Contact
 

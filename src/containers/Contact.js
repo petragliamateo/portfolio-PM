@@ -83,7 +83,7 @@ export default function Contact() {
         />
 
         <textarea
-          placeholder="Message"
+          placeholder="Mensaje"
           onChange={handleChange}
           name="Message"
           value={formData.Message}
