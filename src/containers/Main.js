@@ -32,7 +32,7 @@ export default function Main() {
           Hola! Soy Mateo
         </h1>
         <hr
-          className={`reveal0 w-96 ml-6 border transition-transform duration-1000 ease-out ${transformation}`}
+          className={`w-96 ml-6 border transition-transform duration-1000 ease-out ${transformation}`}
           style={{ borderColor: colors.text }}
         />
         <h1 className="text-3xl font-semibold mt-4 mb-8 text-white">

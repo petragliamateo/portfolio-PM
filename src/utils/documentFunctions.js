@@ -21,7 +21,7 @@ function onScrollReveal(reactElementRef) {
 
   const myScrollFunc = () => {
     const pos = element.getBoundingClientRect().y;
-    if (pos <= 300) {
+    if (pos <= 450) {
       element.style.opacity = 1;
     }
   };
