@@ -1,17 +1,19 @@
 import { useEffect } from 'react';
 
-const slowScroll = (id) => {
+const slowScroll = (ids = []) => {
   const scrolltotop = document.scrollingElement.scrollTop;
-  const target = document.getElementById(id);
   const factor = 0.5;
   const yvalue = scrolltotop * factor;
-  target.style.backgroundPosition = `center ${yvalue}px`;
+  ids.forEach((id) => {
+    const target = document.getElementById(id);
+    target.style.backgroundPosition = `center ${yvalue}px`;
+  });
 };
 
-export default function useSlowScroll(id) {
+export default function useSlowScroll(ids) {
   useEffect(() => {
     function listener() {
-      window.addEventListener('scroll', () => slowScroll(id));
+      window.addEventListener('scroll', () => slowScroll(ids));
     }
     listener();
     return () => listener();

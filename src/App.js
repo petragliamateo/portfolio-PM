@@ -8,8 +8,10 @@ import Footer from './components/Footer';
 import {
   About, Contact, Main, Proyectos, Work,
 } from './containers';
+import useSlowScroll from './utils/hooks/useSlowScroll';
 
 export default function App() {
+  useSlowScroll(['projects', 'about']);
   return (
     <div style={appStyle}>
       <Navbar />

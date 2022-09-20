@@ -15,14 +15,14 @@ function onScrollFixedReveal(elementId) {
   window.addEventListener('scroll', myScrollFunc);
 }
 
-function onScrollReveal(reactElementRef) {
+function onScrollReveal(reactElementRef, style = 'opacity', init = 0, final = 1) {
   const element = reactElementRef;
-  element.style.opacity = 0;
+  element.style[style] = init;
 
   const myScrollFunc = () => {
     const pos = element.getBoundingClientRect().y;
     if (pos <= 450) {
-      element.style.opacity = 1;
+      element.style[style] = final;
     }
   };
   window.addEventListener('scroll', myScrollFunc);

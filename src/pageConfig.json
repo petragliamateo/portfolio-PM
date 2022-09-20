@@ -2,17 +2,17 @@
   "about": [
     {
       "titulo": "Desarrollador Web",
-      "contenido": "Experiencia desarrollando aplicaciones web, principalmente usando React JS. Me manejo bien en la creación de estilos mediante CSS, utilizando el preprocesador Sass y/o el framework Tailwind CSS.",
+      "contenido": "Experiencia desarrollando aplicaciones web, principalmente usando React JS. Buen manejo en la creación de estilos mediante CSS.",
       "id": 1
     },
     {
       "titulo": "Estudios",
-      "contenido": "Desarrollador Full Stack certificado. Estudiante de grado de Licenciatura en Sistemas, exestudiante de Astronomía. Conocimientos de bases de datos con MongoDB",
+      "contenido": "Desarrollador Full Stack certificado. Estudiante de grado de Licenciatura en Sistemas, exestudiante de Astronomía.",
       "id": 2
     },
     {
       "titulo": "Aplicaciones Moviles",
-      "contenido": "Experiencia en la creación de aplicaciones móviles, con React Native en Expo para deploy en SDK o en la App Store.",
+      "contenido": "Experiencia desarrollando aplicaciones móviles con React Native.",
       "id": 3
     }
   ],

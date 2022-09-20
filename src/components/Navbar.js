@@ -13,6 +13,7 @@ export default function Navbar() {
 
   React.useEffect(() => {
     hideNavbar();
+    return () => hideNavbar();
   }, []);
   // Pasar todas las funciones activas a un hook personalizado
   // --> Animaciones quedan arriba del navbar.
