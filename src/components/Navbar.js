@@ -8,8 +8,8 @@ import list from '../assets/icons/list.svg';
 export default function Navbar() {
   const navResponsive = ' hidden lg:block';
   const listMenu = 'mx-2 hover:text-dark-5 transition duration-500 ease-in-out text-white';
-  const marginResponsiveX = 'lg:mx-32 md:mx-24 sm:mx-12 mx-8';
-  const slideItem = 'bg-dark-4 w-full h-12 mx-auto hover:text-dark-5 transition-transform';
+  const marginResponsiveX = 'lg:mx-32 md:mx-24 sm:mx-12 mx-4';
+  const slideItem = 'bg-black w-full h-12 mx-auto hover:text-dark-5 transition-transform';
   const [slide, setSlide] = React.useState(false);
 
   React.useEffect(() => {
