@@ -12,7 +12,7 @@ export default function Main() {
   const [initialValues, setInitialValues] = useState({
     hr: 'scale-x-0', btn: 'scale-0', opacity: 'opacity-0',
   });
-  const marginResponsive = 'xl:ml-52 lg:ml-48 md:ml-32 sm:ml-12 ml-4';
+  const marginResponsive = 'xl:px-52 lg:px-48 md:px-32 sm:px-12 px-4';
   const hoverButton = 'hover:scale-125 transition-transform duration-400 ease-out';
   const initialButton = `transition-transform duration-200 ${initialValues.btn}`;
   const initialOpacity = `transition-opacity duration-1000 ${initialValues.opacity}`;
@@ -32,13 +32,13 @@ export default function Main() {
   }, []);
 
   return (
-    <div className="my-auto w-full bg-black py-32 lg:flex items-center justify-between" id="home">
-      <div className={`${marginResponsive}`} style={{ color: colors.main }}>
+    <div className={`my-auto w-full bg-black py-32 lg:flex items-center justify-between ${marginResponsive}`} id="home">
+      <div style={{ color: colors.main }}>
         <h1 className="text-6xl font-semibold text-white mb-1">
           Hola! Soy Mateo
         </h1>
         <hr
-          className={`w-full ml-6 transition-transform duration-1000 ${initialValues.hr}`}
+          className={`w-full transition-transform duration-1000 ${initialValues.hr}`}
           style={{ borderColor: colors.text }}
         />
         <h1 className="text-3xl font-semibold mt-4 mb-8 text-white">
@@ -79,7 +79,7 @@ export default function Main() {
         </ul>
       </div>
 
-      <div className={`xl:mr-52 lg:mr-48 sm:mx-24 my-4 mx-auto flex flex-wrap sm:w-[400px] w-[300px] sm:h-[400px] h-[300px] ${initialOpacity} delay-500`}>
+      <div className={`my-4 lg:mx-0 mx-auto flex flex-wrap sm:w-[400px] sm:min-w-[400px] w-[300px] sm:h-[400px] h-[300px] ${initialOpacity} delay-500`}>
         <img src={lineCircle} alt="" className="animate-[spin_15s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_10s_linear_infinite] w-1/2 h-1/2" />
         <img src={lineCircle2} alt="" className="animate-[spin_5s_linear_infinite] w-1/2 h-1/2" />
