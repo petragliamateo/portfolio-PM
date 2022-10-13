@@ -25,9 +25,11 @@ export default function Workes({ project }) {
         <h1 className="my-8 text-2xl font-semibold">{titulo}</h1>
         <p className="mx-8">{contenido}</p>
         <div className="flex items-center justify-center my-8">
+          {projectUrl && (
           <a href={projectUrl} className="mx-4 w-48 btn btn-dark border-dark-1 cursor-pointer">
             {projectMsg}
           </a>
+          )}
           <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark">
             <img alt="" src={githubLight} />
           </a>

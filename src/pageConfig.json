@@ -48,11 +48,9 @@
     },
     {
       "titulo": "Algoritmopedia Servidor",
-      "contenido": "Desarrollé el servidor backend para la aplicación Algoritmopedia utilizando Node.js, el servidor se conecta con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guarda los datos en otra base de datos MongoDB.",
+      "contenido": "Desarrollé el servidor backend para la aplicación Algoritmopedia utilizando Node.js y Express, este se conecta con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guarda los datos en otra base de datos MongoDB. Además, guarda tokens de cada usuario, para poder envíar externamente notificaciones a los usuarios que tengan la aplicación instalada.",
       "imgName": "algoritmopedia",
-      "projectUrl": "https://algoritmopedia.org/index.php/movil/",
-      "projectMsg": "Ir",
-      "gitUrl": "https://github.com/petragliamateo/algoritmopedia",
+      "gitUrl": "https://github.com/petragliamateo/algoritmopedia-Backend",
       "id": 2
     }
   ],
