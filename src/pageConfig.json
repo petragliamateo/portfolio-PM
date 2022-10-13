@@ -38,13 +38,22 @@
   ],
   "work": [
     {
-      "titulo": "Algoritmopedia",
-      "contenido": "Programé y diseñé la aplicación para Algoritmopedia, utilizando React Native. También desarrollé el servidor backend con Node.js, conectandose con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guardando los datos en otra base de datos usando MongoDB.",
+      "titulo": "Algoritmopedia App Frontend",
+      "contenido": "Programé y diseñé la aplicación para Algoritmopedia, trabajé usando React Native de base. La aplicación se comunica con el servidor backend, podiendo actualizar los posts internos y guardarlos en la memoria del móvil. También cuenta con notificaciones push.",
       "imgName": "algoritmopedia",
       "projectUrl": "https://algoritmopedia.org/index.php/movil/",
       "projectMsg": "Ir",
       "gitUrl": "https://github.com/petragliamateo/algoritmopedia",
       "id": 1
+    },
+    {
+      "titulo": "Algoritmopedia Servidor",
+      "contenido": "Desarrollé el servidor backend para la aplicación Algoritmopedia utilizando Node.js, el servidor se conecta con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guarda los datos en otra base de datos MongoDB.",
+      "imgName": "algoritmopedia",
+      "projectUrl": "https://algoritmopedia.org/index.php/movil/",
+      "projectMsg": "Ir",
+      "gitUrl": "https://github.com/petragliamateo/algoritmopedia",
+      "id": 2
     }
   ],
   "palettes": {
