@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 
 import githubLight from '../assets/icons/github-light.svg';
 import * as Images from '../assets/images/index';
+import PageContext from '../contexts/PageContext';
 import { onScrollReveal } from '../utils/documentFunctions';
 
 export default function Workes({ project }) {
   const {
     imgName, titulo, contenido, projectUrl, projectMsg, gitUrl,
   } = project;
+  const setPageData = useContext(PageContext);
 
   const thisRef = useRef();
   useEffect(() => {
@@ -30,6 +32,7 @@ export default function Workes({ project }) {
             {projectMsg}
           </a>
           )}
+          <button type="button" className="btn" onClick={() => setPageData({ data: project, actualPage: 'work' })}>Ver</button>
           <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark">
             <img alt="" src={githubLight} />
           </a>
