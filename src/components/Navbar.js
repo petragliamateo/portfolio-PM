@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="bg-black border-gray-700 fixed w-full top-0 transition-all"
+      className="bg-black border-gray-700 fixed w-full top-0 transition-all z-10"
       style={{ borderBottomWidth: 1 }}
       id="navbar"
     >
