@@ -5,12 +5,17 @@ import React from 'react';
 import { handleScroll, hideNavbar } from '../utils/documentFunctions';
 import list from '../assets/icons/list.svg';
 
-export default function Navbar() {
+export default function Navbar({ setPage }) {
   const navResponsive = ' hidden lg:block';
   const listMenu = 'mx-2 hover:text-dark-5 transition duration-500 ease-in-out text-white';
   const marginResponsiveX = 'lg:mx-32 md:mx-24 sm:mx-12 mx-4';
   const slideItem = 'bg-black w-full h-12 mx-auto hover:text-dark-5 transition-transform';
   const [slide, setSlide] = React.useState(false);
+
+  const handleScrollAndHome = (id) => {
+    setPage('home');
+    handleScroll(id);
+  };
 
   React.useEffect(() => {
     hideNavbar();
@@ -33,16 +38,16 @@ export default function Navbar() {
         <div className={navResponsive}>
           <ul className="flex">
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('home')}>Home</button>
+              <button type="button" onClick={() => handleScrollAndHome('home')}>Home</button>
             </li>
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('about')}>About</button>
+              <button type="button" onClick={() => handleScrollAndHome('about')}>About</button>
             </li>
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('projects')}>Proyectos</button>
+              <button type="button" onClick={() => handleScrollAndHome('projects')}>Proyectos</button>
             </li>
             <li className={listMenu}>
-              <button type="button" onClick={() => handleScroll('contact')}>Contacto</button>
+              <button type="button" onClick={() => handleScrollAndHome('contact')}>Contacto</button>
             </li>
           </ul>
         </div>
@@ -57,7 +62,7 @@ export default function Navbar() {
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-300`}
           onClick={() => {
             setSlide((prev) => !prev);
-            handleScroll('home');
+            handleScrollAndHome('home');
           }}
         >
           Home
@@ -68,7 +73,7 @@ export default function Navbar() {
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-500`}
           onClick={() => {
             setSlide((prev) => !prev);
-            handleScroll('about');
+            handleScrollAndHome('about');
           }}
         >
           About
@@ -79,7 +84,7 @@ export default function Navbar() {
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-700`}
           onClick={() => {
             setSlide((prev) => !prev);
-            handleScroll('projects');
+            handleScrollAndHome('projects');
           }}
         >
           Projects
@@ -90,7 +95,7 @@ export default function Navbar() {
           className={`${slide ? 'scale-100' : 'scale-0'} ${slideItem} duration-1000`}
           onClick={() => {
             setSlide((prev) => !prev);
-            handleScroll('contact');
+            handleScrollAndHome('contact');
           }}
         >
           Contact
