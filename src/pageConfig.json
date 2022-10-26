@@ -52,6 +52,13 @@
       "imgName": "algoritmopedia",
       "gitUrl": "https://github.com/petragliamateo/algoritmopedia-Backend",
       "id": 2
+    },
+    {
+      "titulo": "Pagina web",
+      "contenido": "12355",
+      "imgName": "algoritmopedia",
+      "gitUrl": "https://github.com/petragliamateo/algoritmopedia-Backend",
+      "id": 3
     }
   ],
   "palettes": {

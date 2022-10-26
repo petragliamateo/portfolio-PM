@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ProyectoMuestra from '../components/ProyectoMuestra';
 import * as content from '../pageConfig.json';
 
 import backgroundImage from '../assets/background/pattern.svg';
+import Carousel from '../components/Carousel';
 
 export default function Proyectos() {
   const { projects } = content;
@@ -15,9 +15,7 @@ export default function Proyectos() {
 
       <div className="flex flex-col">
 
-        {projects.map((p) => (
-          <ProyectoMuestra key={p.id} project={p} />
-        ))}
+        <Carousel values={projects} render="projects" arrowColor="#828ECF" />
 
         <a
           href="https://github.com/petragliamateo"
