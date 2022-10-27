@@ -44,7 +44,17 @@
       "projectUrl": "https://algoritmopedia.org/index.php/movil/",
       "projectMsg": "Ir",
       "gitUrl": "https://github.com/petragliamateo/algoritmopedia",
-      "id": 1
+      "id": 1,
+      "technologies": ["React Native", "Expo"],
+      "textData": [
+       "El cliente me pidió que desarrolle una aplicación basandose en su página web. Por lo tanto los desafíos a la hora de desarrollar la aplicación fueron adaptar un diseño web en una aplicación móvil, conectar la aplicación a la base de datos de la página web y formatear código HTML en objetos para una interfaz única en el móvil.",
+       "La aplicación consta de un menú principal, pantallas para cada posteo, sección para guardar posteos, pantalla de configuración, sliders iniciales de modo tutorial y más.",
+       "La aplicación utiliza la memoria del celular para guardar los datos y así utilizarla cuando no se dispone de conexión a internet.",
+       "La manipulación de la memoria del celular se realiza usando la librería AsyncStorage, para la descarga de archivos se utiliza la librería expo-file-system.",
+       "La aplicación también puede recibir notificaciones push, usando expo-notifications. El servidor guarda los tokens de cada móvil que tiene la aplicación, por lo que se pueden mandar notificaciones personalizadas a aquellos que tengan la aplicación instalada cuando queramos.",
+       "La aplicación se conecta con el servidor backend utilizando axios, realizando solicitudes GET para recibir los posteos, y POST para subir los tokens para notificaciones."
+      ],
+      "imgData": ["algoritmopedia-front-0", "algoritmopedia-front-1", "algoritmopedia-front-2", "algoritmopedia-front-3", "algoritmopedia-front-4", "algoritmopedia-front-5", "algoritmopedia-front-6", "algoritmopedia-front-7"]
     },
     {
       "titulo": "Algoritmopedia Servidor",

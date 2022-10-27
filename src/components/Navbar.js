@@ -12,9 +12,9 @@ export default function Navbar({ setPage }) {
   const slideItem = 'bg-black w-full h-12 mx-auto hover:text-dark-5 transition-transform';
   const [slide, setSlide] = React.useState(false);
 
-  const handleScrollAndHome = (id) => {
+  const handleScrollAndHome = async (id) => {
     setPage('home');
-    handleScroll(id);
+    setTimeout(() => handleScroll(id), 100);
   };
 
   React.useEffect(() => {

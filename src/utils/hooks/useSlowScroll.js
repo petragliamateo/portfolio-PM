@@ -6,7 +6,9 @@ const slowScroll = (ids = []) => {
   const yvalue = scrolltotop * factor;
   ids.forEach((id) => {
     const target = document.getElementById(id);
-    target.style.backgroundPosition = `center ${yvalue}px`;
+    if (target) {
+      target.style.backgroundPosition = `center ${yvalue}px`;
+    }
   });
 };
 
