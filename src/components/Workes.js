@@ -7,7 +7,7 @@ import { onScrollReveal } from '../utils/documentFunctions';
 
 export default function Workes({ project }) {
   const {
-    imgName, titulo, contenido, projectUrl, projectMsg, gitUrl,
+    imgName, titulo, contenido, gitUrl,
   } = project;
   const setPageData = useContext(PageContext);
 
@@ -27,11 +27,6 @@ export default function Workes({ project }) {
         <h1 className="my-8 text-2xl font-semibold">{titulo}</h1>
         <p className="mx-8">{contenido}</p>
         <div className="flex items-center justify-center my-8">
-          {projectUrl && (
-          <a href={projectUrl} className="mx-4 w-48 btn btn-dark border-dark-1 cursor-pointer">
-            {projectMsg}
-          </a>
-          )}
           <button type="button" className="btn" onClick={() => setPageData({ data: project, actualPage: 'work' })}>Ver</button>
           <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark">
             <img alt="" src={githubLight} />

@@ -21,7 +21,7 @@ a {
 }
 
 .btn{
-  @apply py-4 px-8 font-bold shadow-xl border;
+  @apply py-4 px-8 font-bold border;
 }
 .btn-dark{
   @apply bg-black text-dark-6 hover:border-dark-3;

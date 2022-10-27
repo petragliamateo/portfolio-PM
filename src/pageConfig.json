@@ -54,7 +54,7 @@
        "La aplicación también puede recibir notificaciones push, usando expo-notifications. El servidor guarda los tokens de cada móvil que tiene la aplicación, por lo que se pueden mandar notificaciones personalizadas a aquellos que tengan la aplicación instalada cuando queramos.",
        "La aplicación se conecta con el servidor backend utilizando axios, realizando solicitudes GET para recibir los posteos, y POST para subir los tokens para notificaciones."
       ],
-      "imgData": ["algoritmopedia-front-0", "algoritmopedia-front-1", "algoritmopedia-front-2", "algoritmopedia-front-3", "algoritmopedia-front-4", "algoritmopedia-front-5", "algoritmopedia-front-6", "algoritmopedia-front-7"]
+      "imgData": ["algoritmopediaFront0", "algoritmopediaFront1", "algoritmopediaFront2", "algoritmopediaFront3", "algoritmopediaFront4", "algoritmopediaFront5", "algoritmopediaFront6", "algoritmopediaFront7"]
     },
     {
       "titulo": "Algoritmopedia Servidor",
