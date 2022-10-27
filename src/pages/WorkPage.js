@@ -14,7 +14,7 @@ export default function WorkPage({ pageData }) {
         <img className="w-96" alt={imgName} src={Images[imgName]} />
       </div>
       <div className="flex gap-4">
-        {technologies.map((t) => <p className="py-2 px-4 border border-dark-2 rounded font-bold bg-dark-5">{t}</p>)}
+        {technologies.map((t) => <p key={t} className="py-2 px-4 border border-dark-2 rounded font-bold bg-dark-5">{t}</p>)}
       </div>
       <div className="w-full text-center md:w-2/3">
         {textData.map((t) => <p className="m-1" key={t}>{t}</p>)}

@@ -33,7 +33,9 @@ export default function Navbar({ setPage }) {
       <div
         className={`flex justify-between ${marginResponsiveX} text-2xl font-semibold h-16 items-center`}
       >
-        <h1 className="text-dark-5">Mateo Petraglia</h1>
+        <button type="button" onClick={() => setPage('home')}>
+          <h1 className="text-dark-5">Mateo Petraglia</h1>
+        </button>
 
         <div className={navResponsive}>
           <ul className="flex">
