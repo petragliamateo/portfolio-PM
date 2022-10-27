@@ -28,9 +28,11 @@ export default function Workes({ project }) {
         <p className="mx-8">{contenido}</p>
         <div className="flex items-center justify-center my-8">
           <button type="button" className="btn" onClick={() => setPageData({ data: project, actualPage: 'work' })}>Ver</button>
-          <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark">
-            <img alt="" src={githubLight} />
-          </a>
+          {gitUrl && (
+            <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark">
+              <img alt="" src={githubLight} />
+            </a>
+          )}
         </div>
       </div>
     </div>

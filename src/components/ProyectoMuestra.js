@@ -6,7 +6,7 @@ import { onScrollReveal } from '../utils/documentFunctions';
 
 export default function ProyectoMuestra({ project }) {
   const {
-    imgName, titulo, contenido, projectUrl, projectMsg, gitUrl,
+    imgName, titulo, contenido, gitUrl,
   } = project;
 
   const thisRef = useRef();
@@ -25,14 +25,11 @@ export default function ProyectoMuestra({ project }) {
         <h1 className="my-8 text-2xl font-semibold">{titulo}</h1>
         <p className="mx-8">{contenido}</p>
         <div className="flex items-center justify-center my-8">
-          {projectUrl && (
-          <a href={projectUrl} className="mx-4 w-48 btn btn-dark border-dark-0 cursor-pointer">
-            {projectMsg}
-          </a>
+          {gitUrl && (
+            <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark border-dark-0">
+              <img alt="" src={githubLight} />
+            </a>
           )}
-          <a href={gitUrl} className="mx-4 border-dark-0 flex justify-between items-center rounded-full btn btn-dark">
-            <img alt="" src={githubLight} />
-          </a>
         </div>
       </div>
     </div>

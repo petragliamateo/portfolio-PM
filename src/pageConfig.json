@@ -33,7 +33,10 @@
       "projectUrl": "https://juegones.vercel.app/",
       "projectMsg": "Ir",
       "gitUrl": "https://github.com/petragliamateo/Juegones",
-      "id": 2
+      "id": 2,
+      "technologies": [],
+      "textData": [],
+      "imgData": []
     }
   ],
   "work": [
@@ -59,16 +62,41 @@
     {
       "titulo": "Algoritmopedia Servidor",
       "contenido": "Desarrollé el servidor backend para la aplicación Algoritmopedia utilizando Node.js y Express, este se conecta con la base de datos SQL de la página Algoritmopedia.org (MySQL), y guarda los datos en otra base de datos MongoDB. Además, guarda tokens de cada usuario, para poder envíar externamente notificaciones a los usuarios que tengan la aplicación instalada.",
-      "imgName": "algoritmopedia",
+      "imgName": "backend0",
       "gitUrl": "https://github.com/petragliamateo/algoritmopedia-Backend",
-      "id": 2
+      "id": 2,
+      "technologies": ["Node.js", "Express", "MongoDB", "MySQL"],
+      "textData": [
+        "Servidor Backend para la aplicación móvil de algoritmopedia. El cliente precisaba conectar la aplicación con su página web así mostrar los posteos en ella, para esto diseñé el servidor que se encarga de tomar los posteos de la base de datos en MySQL, ya que la web es de wordpress, y que el celular los pueda recibir mediante solicitudes GET.",
+        "Además el servidor recibe datos de los celulares, como los tokens para las notificaciones y los guarda en una base de datos MongoDB."
+      ],
+      "imgData": []
     },
     {
-      "titulo": "Pagina web",
-      "contenido": "12355",
-      "imgName": "algoritmopedia",
-      "gitUrl": "https://github.com/petragliamateo/algoritmopedia-Backend",
-      "id": 3
+      "titulo": "Página web",
+      "contenido": "Front end de página web realizada usando unicamente HTML y CSS puro",
+      "imgName": "paginaWebHtmlCss",
+      "id": 3,
+      "technologies": ["HTML", "CSS"],
+      "textData": [
+        "Página web utilizando únicamente HTML y CSS puros, sin frameworks.",
+        "El cliente fue explícito con esto, quería que se trabaje únicamente con estas dos tecnologías"
+      ],
+      "imgData": ["paginaWebHtmlCss0", "paginaWebHtmlCss1", "paginaWebHtmlCss2", "paginaWebHtmlCss3"]
+    },
+    {
+      "titulo": "Template para Aplicación Web de tipo blogs",
+      "contenido": "Este es un template para aplicaciones web o móviles, está hecha para trabajar con MongoDB y GraphQL.",
+      "imgName": "blogs",
+      "gitUrl": "https://github.com/petragliamateo/blogs-project",
+      "id": 4,
+      "technologies": ["MongoDB", "GraphQL"],
+      "textData": [
+        "Template para proyectos que precisen uso tipo blogs, aplicaciones de tiendas, noticias, publicaciones, etc..",
+        "Se utiliza MongoDB para guardar los datos, que se manipulan mediante GraphQL con Apollo, donde se usan consultas, mutaciones y suscripciones.",
+        "El servidor está creado con Express, httpServer y ApolloServer, también contiene una parte para la administración donde se debe iniciar sesión con un usuario y permite la creación de nuevos blogs y modificación de ya existentes; las credenciales para iniciar sesión son codificadas con jsonwebtoken y, una vez iniciada la sesión se guarda el token con la autorización para las acciones del administrador."
+      ],
+      "imgData": ["blogs0", "blogs1"]
     }
   ],
   "palettes": {

@@ -25,17 +25,20 @@ export default function WorkPage({ pageData }) {
             {projectMsg}
           </a>
         )}
-        {projectUrl && (
+        {gitUrl && (
           <a href={gitUrl} className="mx-4 flex justify-between items-center rounded-full btn btn-dark border-dark-6">
             <img alt="" src={githubLight} />
           </a>
         )}
       </div>
-      <div className="bg-dark-4">
-        <div className="mx-auto w-full py-8 md:w-2/3 flex flex-wrap justify-center items-center gap-8">
-          {imgData.map((i) => <img className="w-96" key={i} alt={i} src={Captures[i]} />)}
+      {imgData.length > 0
+        && (
+        <div className="bg-dark-4 w-full">
+          <div className="mx-auto w-full py-8 md:w-2/3 flex flex-wrap justify-center items-center gap-8">
+            {imgData.map((i) => <img className="w-96" key={i} alt={i} src={Captures[i]} />)}
+          </div>
         </div>
-      </div>
+        )}
     </div>
   );
 }
